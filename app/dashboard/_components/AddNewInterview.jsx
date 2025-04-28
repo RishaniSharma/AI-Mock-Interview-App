@@ -14,6 +14,9 @@ import { Textarea } from '@/components/ui/textarea'
 
 function AddNewInterview() {
     const [openDialog,setOpenDialog]=useState(false)
+    const [JobPosition,setJobPosition]=useState();
+    const [JobDesc,setJobDesc]=useState();
+    const [JobExperience,setJobExperience]=useState();
   return (
     <div>
         <div className='p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all'
@@ -32,7 +35,9 @@ function AddNewInterview() {
 
             <div className='mt-7 my-3'>
               <label>Job Position/ Role Name</label>
-              <Input placeholder="Ex. Full Stack Developer" required />
+              <Input placeholder="Ex. Full Stack Developer" required 
+              onChange
+              />
             </div>
 
             <div className='my-3'>
